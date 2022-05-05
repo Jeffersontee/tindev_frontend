@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./Login.css";
 
 import api from '../services/api'
 
 import logo from "../assets/logo.svg";
 
-function Login({ history }) { 
+function Login() { 
+	let navigate = useNavigate()
 	const [username, setUsername] = useState('');
-
+	
 	async function handleSubmit(e) {
+		console.log(e);
 		e.preventDefault();
 
 		const response = await api.post('/devs', {
 			username: username
 		});
 
-		console.log(response);
+		const { _id } = response.data; 
 
-		console.log(username);
-
-		history.push('/main');
+		navigate(`/dev/${_id}`);
 	}
 
   return (
