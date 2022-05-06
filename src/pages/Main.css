@@ -1,0 +1,73 @@
+.main-container {  /* container da tela toda */
+	max-width: 980px; /* Largura maxima de tela */ 
+	margin: 0 auto; /* centraliza  */ 
+	padding: 50px 0; /* espaço margem up 50 margin dow 50 centraliza o conteudo */ 
+	text-align: center; /* centraliza tudo no centro */ 
+
+}
+
+.main-container ul {
+	list-style: none; /* tira as bolinha da lateral */ 
+	display: grid; /* alinhamento em grid */ 
+	grid-template-columns: repeat(3, 1fr); /* 1fr 2fr 1fr caso queira colunas maior */ 
+	grid-gap: 30px; /* espacamento entre as colunas */ 
+	margin-top: 30px; /* distancia img dev do icone tindev */ 	
+}
+
+.main-container ul li {
+	display: flex;
+	flex-direction: column; /* organiza li em sentido vertical */ 
+}
+
+.main-container ul li img {
+	max-width: 100%; /* ocupa o maximo do tamanho da li */
+	border-radius: 15px 15px 0 0 ; /* emcima na esquerda em cima na direita  */ 
+}
+
+.main-container ul li footer {
+	flex: 1; /* faz com que footer não fique desalinhado  se a descrição tive muito caracteres */ 
+	background: #FFF; 
+	border: 1px solid #EEE; 
+	padding: 15px 20px;
+	text-align: left; /* footer esquerd */
+	border-radius: 0 0 15px 15px; /* emcima na esquerda em cima na direita  */
+}
+
+.main-container ul li footer strong {
+	 font-size: 16px;
+	 color: #333;
+}
+
+.main-container ul li footer p {
+	font-size: 14px;  /* tamanho do texto */
+	line-height: 20px; /* espesura da linha do texto  */
+	color: #999;
+	margin-top: 5px; /* separa as linha entra o texto do footer */
+}
+
+.main-container ul li footer h1 {
+	font-size: 14px;
+}
+
+.main-container ul li .buttons {
+	margin-top: 10px; /* espaçamento entre o botão e o card */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); 
+	grid-gap: 10px; /* cria um espaçamento entre os dois botões */
+}
+
+.main-container ul li .buttons button {
+	height: 50px;
+	box-shadow: 0 2px 2px 0 rgba(0,0, 0, 0.5); /* sombra */
+	border: 0; /* tira a sombra */
+	border-radius: 4px;
+	border: 0;
+	background: #FFF;
+	cursor: pointer;
+	 
+}
+
+.main-container ul li .buttons button:hover img {
+	transform: translateY(-5px);
+	transition: all 0.2s;
+}
